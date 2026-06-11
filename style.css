@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap');
+
+
+
+body {
+    background-image: url("wallpaperop1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    background-color: #fff6f6; /* Serves as base and fallback color */
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #4a3b3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+/* Floating Background Shapes */
+
+.shape {
+    position: absolute;
+    color: #ffdae0;
+    font-size: 1.8rem;
+    z-index: -1;
+    user-select: none;
+}
+
+
+
+@charset "UTF-8";
+
+
+
+.shape-1 {
+    top: 15%;
+    left: 10%;
+    transform: rotate(15deg);
+}
+
+
+
+.shape-2 {
+    top: 40%;
+    right: 12%;
+    font-size: 2.2rem;
+    transform: rotate(-10deg);
+}
+
+
+
+.shape-3 {
+    top: 75%;
+    left: 15%;
+    transform: rotate(45deg);
+}
+
+
+
+header {
+    text-align: center;
+    padding: 0 0 40px 0; /* Changed top padding to 0 so the banner hugs the very top edge */
+    background-color: #ffe4e4;
+    width: 100%;
+    border-bottom: 3px dashed #ffc0c0;
+    box-sizing: border-box;
+}
+
+/* --- HEADER BANNER STYLES --- */
+.header-banner-container {
+    width: 100%;
+    height: 250px; /* Adjust this number to make the top banner taller or shorter */
+    overflow: hidden;
+    margin-bottom: 30px; /* Pushes the sparkles and title down gracefully */
+    border-bottom: 1px solid #ffe4e4;
+}
+
+.header-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps your banner photo from stretching or distorting */
+    object-position: center; /* Keeps the middle of your image focused */
+    display: block;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: #ff758f;
+    margin: 10px 0 10px 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+}
+
+
+
+header p {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #a38587;
+    margin: 0;
+}
+
+
+
+.sparkle-decoration {
+    color: #ffb3c1;
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+}
+
+
+
+/* 1. Keep the grid wide but neat */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px; /* Slightly tighter gap */
+
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+    z-index: 1;
+}
+
+
+
+/* 2. Make the diary entry box snugger and shorter */
+
+.diary-entry {
+    background-color: #fff0f2;
+    border: 2px solid #ffccd5;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(255, 117, 143, 0.1);
+    padding: 20px; /* Snugger padding inside the box */
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+
+
+/* 3. Shorten the image height significantly so the box is less tall */
+
+.entry-image-container {
+    width: 100%;
+    height: 220px; /* Dropped from 280px to 220px to cut down on vertical height */
+
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 15px; /* Tighter spacing under the photo */
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* This forces the actual image to scale perfectly without stretching */
+
+.entry-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This is the magic line that stops stretching! */
+
+    object-position: center; /* Centers the focus of the photo */
+
+    display: block;
+}
+
+/* 4. Tighten up header text margins to save vertical space */
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #4a3b3c;
+    font-size: 1.6rem; /* Slightly smaller text for the new compact size */
+
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #a38587;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+
+
+.divider {
+    font-size: 0.8rem;
+    color: #ff758f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+
+.date {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    color: #c2999c;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+
+
+/* 1. Make the main paragraph text smaller and tighter */
+
+.diary-entry p:not(.date) {
+    font-size: 0.95rem; /* Dropped from 1.05rem to make the text smaller */
+
+    line-height: 1.5; /* Tightened the space between text lines from 1.7 to 1.5 */
+
+    color: #5c4b4c;
+    padding: 0 5px; /* Slightly snugger side padding */
+
+    margin-top: 0;
+    margin-bottom: 15px; /* Reduces the gap before the button container */
+}
+
+
+
+/* 2. Bring the "Back to Top" button container closer */
+
+.back-to-top-container {
+    margin-top: auto; /* Pushes the button to the bottom neatly */
+
+    padding-top: 5px; /* Tighter spacing above the button */
+}
+
+
+
+/* 3. Optional: Make the button itself slightly more compact */
+
+.top-button {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: auto;
+}
+
+
+
+    footer p {
+        font-size: 0.85rem;
+        color: #a38587;
+        margin-top: 5px;
+    }
+
+
+
+.diary-link {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #ff758f;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+
+
+    .diary-link:hover {
+        color: #c25269;
+        text-decoration: underline;
+    }
+
+
+
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: #a38587;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+
+
+.top-nav {
+    background: #ffffff;
+    width: 90%;
+    max-width: 750px; /* Matched to the new layout width */
+
+    margin-top: 30px;
+    margin-bottom: -10px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #ffe4e4;
+    box-shadow: 0 10px 25px rgba(255, 117, 143, 0.04);
+    text-align: center;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+
+
+.nav-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #a38587;
+    display: block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+.nav-item {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #ff758f;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #fff5f6;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+
+
+    .nav-item:hover {
+        background-color: #ff758f;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+
+
+.log-finder-container {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px dashed #ffe4e4;
+}
+
+
+
+.dropdown-label {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a38587;
+    margin-right: 10px;
+}
+
+
+
+#log-select {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #4a3b3c;
+    background-color: #fff5f6;
+    border: 1px solid #ffe4e4;
+    padding: 6px 12px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+
+    #log-select:focus {
+        border-color: #ff758f;
+        box-shadow: 0 0 0 3px rgba(255, 117, 143, 0.15);
+    }
+
+
+
+.shelf-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto 60px auto;
+}
+
+
+
+.shelf-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 0 15px;
+    align-items: end;
+}
+
+
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -5px;
+}
+
+
+
+.album-commentary {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: #a38587;
+    text-align: center;
+    margin-top: 8px;
+}
+
+
+
+.visual-shelf {
+    height: 12px;
+    background-color: #f7d6d7;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: 0 8px 15px rgba(247, 214, 215, 0.4);
+    margin-top: 5px;
+}
+
+
+
+.album-link {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+
+
+.shelf-album-art {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+
+
+    .shelf-album-art:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 25px rgba(255, 117, 143, 0.3);
+    }
+
+.title-custom-icon {
+    width: 40px; /* Changed from 35px to 24px to make them smaller */
+
+    height: 40px; /* Changed from 35px to 24px to keep them a perfect square */
+
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+/* --- VIRTUAL CLOSET CARDS --- */
+.closet-card {
+    background-color: #ffffff; /* Clean white interior so clothing colors pop */
+    border: 2px solid #ffe4e4;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(255, 117, 143, 0.05);
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* Subtle hover pop effect when looking through clothes */
+    .closet-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(255, 117, 143, 0.1);
+        border-color: #ffccd5;
+    }
+
+/* Polar-art styled clothing containers */
+.closet-image-container {
+    width: 100%;
+    height: 260px; /* Gives the clothes a nice vertical showcase */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.closet-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps clothing textures and shapes crisp without squishing */
+    object-position: center;
+    display: block;
+}
+
+/* Closet Text Details */
+.closet-details {
+    padding: 0 5px;
+    text-align: left; /* Alignment makes lists of descriptions look organized */
+}
+
+    .closet-details h3 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        font-size: 1.3rem;
+        color: #4a3b3c;
+        margin: 0 0 5px 0;
+    }
+
+/* Little chic clothing sub-labels */
+.closet-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #ff758f;
+    background-color: #fff5f6;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.closet-details p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #6e5a5c;
+    margin: 0;
+}
+/* --- CONTACT PAGE LAYOUT --- */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 40px auto;
+}
+
+.contact-card {
+    background-color: #fff0f2;
+    border: 2px solid #ffccd5;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(255, 117, 143, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    box-sizing: border-box;
+}
+
+.contact-socials h3, .contact-message h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #ff758f;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.socials-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 0.95rem;
+    color: #4a3b3c;
+}
+
+.social-icon {
+    margin-right: 8px;
+    color: #ff758f;
+}
+
+.contact-divider {
+    height: 1px;
+    background: dashed #ffccd5;
+    width: 100%;
+}
+
+.contact-note {
+    font-size: 0.9rem;
+    color: #a38587;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* --- FORM ELEMENTS --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-input, .form-textarea {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 100%;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border: 1px solid #ffe4e4;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: #4a3b3c;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+    .form-input:focus, .form-textarea:focus {
+        border-color: #ff758f;
+        box-shadow: 0 0 0 3px rgba(255, 117, 143, 0.15);
+    }
+
+.form-submit-btn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+    background-color: #ff758f;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+    .form-submit-btn:hover {
+        background-color: #c25269;
+    }
+/* --- ABOUT PAGE LAYOUT --- */
+.about-main {
+    width: 100%;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.about-container {
+    background-color: #fff0f2;
+    border: 2px solid #ffccd5;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(255, 117, 143, 0.1);
+    padding: 35px;
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Automatically stacks nicely on mobile screens! */
+}
+
+/* --- LEFT SIDE: PROFILE PIC --- */
+.about-profile {
+    flex: 1;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image-frame {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; /* Keeps the profile photo perfectly round and cute */
+    border: 4px solid #ffffff;
+    box-shadow: 0 6px 15px rgba(255, 117, 143, 0.15);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-status {
+    background: #ffffff;
+    border: 1px solid #ffe4e4;
+    border-radius: 14px;
+    padding: 12px 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .profile-status p {
+        font-size: 0.85rem;
+        color: #5c4b4c;
+        margin: 6px 0;
+        text-align: left;
+    }
+
+/* --- RIGHT SIDE: BIO TEXT --- */
+.about-bio {
+    flex: 2;
+    min-width: 300px;
+    text-align: left;
+}
+
+    .about-bio h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: #4a3b3c;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .about-bio h3 {
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #ff758f;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .about-bio p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #5c4b4c;
+        margin-bottom: 15px;
+    }
+
+.about-divider {
+    height: 1px;
+    background: dashed #ffccd5;
+    margin: 20px 0;
+}
+
+.about-favorites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.92rem;
+    color: #4a3b3c;
+}
+
+.about-closing {
+    font-style: italic;
+    color: #a38587;
+}
