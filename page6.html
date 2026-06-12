@@ -63,7 +63,6 @@
             text-align: center;
         }
 
-        /* Cute, customizable styling for your result images */
         .result-img {
             max-width: 100%;
             height: auto;
@@ -110,6 +109,7 @@
         <section class="quiz-menu">
             <button class="quiz-btn" onclick="showQuiz('character')">✦ Favorite Characters Quiz ♡</button>
             <button class="quiz-btn" onclick="showQuiz('personality')">✦ Personality Test ✦</button>
+            <button class="quiz-btn" onclick="showQuiz('song')">✦ Get a Song Rec 🎵</button>
         </section>
 
         <section id="character-section" class="quiz-box" style="display: none;">
@@ -284,6 +284,99 @@
             </div>
         </section>
 
+        <section id="song-section" class="quiz-box" style="display: none;">
+            <h3 style="text-align: center; color: #c292b4;">Find Your Vibe Song Match</h3>
+            <hr style="border: 0; border-top: 1px solid #ffeff9; margin-bottom: 20px;">
+
+            <form id="song-quiz">
+                <div class="question">
+                    <p>1. Choose an ideal background scenery:</p>
+                    <label><input type="radio" name="s1" value="adore"> Rain hitting your window pane at dusk</label><br>
+                    <label><input type="radio" name="s1" value="tvgirl"> A retro bedroom filled with old vinyl records</label><br>
+                    <label><input type="radio" name="s1" value="shesgreen"> A foggy morning walk through an empty park</label><br>
+                    <label><input type="radio" name="s1" value="clairo"> Sunny afternoon park layouts with a sketchbook</label><br>
+                    <label><input type="radio" name="s1" value="wheatus"> A messy garage setup with skateboards everywhere</label><br>
+                    <label><input type="radio" name="s1" value="avril"> An arcade center full of neon lights and loud sound effects</label><br>
+                    <label><input type="radio" name="s1" value="lana"> Looking out a car window driving beneath streetlights</label>
+                </div>
+
+                <div class="question">
+                    <p>2. Pick a mood you find yourself in often:</p>
+                    <label><input type="radio" name="s2" value="adore"> Sweetly sentimental and full of thoughts</label><br>
+                    <label><input type="radio" name="s2" value="tvgirl"> Sarcastic but deeply analytical</label><br>
+                    <label><input type="radio" name="s2" value="shesgreen"> Calm, relaxed, and floating along</label><br>
+                    <label><input type="radio" name="s2" value="clairo"> Introspective and peaceful</label><br>
+                    <label><input type="radio" name="s2" value="wheatus"> A bit of an outsider, but totally fine with it</label><br>
+                    <label><input type="radio" name="s2" value="avril"> High-energy, bold, and ready to break some rules</label><br>
+                    <label><input type="radio" name="s2" value="lana"> Dreamy, romantic, and cinematic</label>
+                </div>
+
+                <div class="question">
+                    <p>3. What is your go-to item when leaving the house?:</p>
+                    <label><input type="radio" name="s3" value="adore"> A silver heart ring</label><br>
+                    <label><input type="radio" name="s3" value="tvgirl"> A cool thrifted jacket</label><br>
+                    <label><input type="radio" name="s3" value="shesgreen"> Oversized cozy headphones</label><br>
+                    <label><input type="radio" name="s3" value="clairo"> A canvas tote bag</label><br>
+                    <label><input type="radio" name="s3" value="wheatus"> Classic worn-out sneakers</label><br>
+                    <label><input type="radio" name="s3" value="avril"> Graphic tee with safety pins</label><br>
+                    <label><input type="radio" name="s3" value="lana"> Red lip gloss</label>
+                </div>
+
+                <div class="question">
+                    <p>4. Pick a musical core element:</p>
+                    <label><input type="radio" name="s4" value="adore"> Soft acoustic strings and sweet lyrics</label><br>
+                    <label><input type="radio" name="s4" value="tvgirl"> Hypnotic 60s samples and steady drum loops</label><br>
+                    <label><input type="radio" name="s4" value="shesgreen"> Shoegaze wall-of-sound guitar hums</label><br>
+                    <label><input type="radio" name="s4" value="clairo"> Groovy bedroom-pop bass lines</label><br>
+                    <label><input type="radio" name="s4" value="wheatus"> Nostalgic 2000s alternative rock choruses</label><br>
+                    <label><input type="radio" name="s4" value="avril"> Loud pop-punk energy drums</label><br>
+                    <label><input type="radio" name="s4" value="lana"> Sweeping cinematic orchestral tracks</label>
+                </div>
+
+                <div class="question">
+                    <p>5. How do you deal with missing someone?</p>
+                    <label><input type="radio" name="s5" value="adore"> Write your feelings down directly or text them</label><br>
+                    <label><input type="radio" name="s5" value="tvgirl"> Think about the irony and loop a playlist</label><br>
+                    <label><input type="radio" name="s5" value="shesgreen"> Let your thoughts zone out entirely while listening to music</label><br>
+                    <label><input type="radio" name="s5" value="clairo"> Reflect gently on the great memories shared</label><br>
+                    <label><input type="radio" name="s5" value="wheatus"> Just daydream about hanging out someday</label><br>
+                    <label><input type="radio" name="s5" value="avril"> Distract yourself by going out and making a scene</label><br>
+                    <label><input type="radio" name="s5" value="lana"> Feel it deeply like you are a main character in a movie</label>
+                </div>
+
+                <div class="question">
+                    <p>6. Pick an aesthetic color palette:</p>
+                    <label><input type="radio" name="s6" value="adore"> Soft muted pinks</label><br>
+                    <label><input type="radio" name="s6" value="tvgirl"> Striking pink and beige indie layouts</label><br>
+                    <label><input type="radio" name="s6" value="shesgreen"> Misty silver and seafoam green</label><br>
+                    <label><input type="radio" name="s6" value="clairo"> Warm vintage yellow and cream</label><br>
+                    <label><input type="radio" name="s6" value="wheatus"> Classic faded denim blue</label><br>
+                    <label><input type="radio" name="s6" value="avril"> Hot pink slashed with deep black</label><br>
+                    <label><input type="radio" name="s6" value="lana"> Golden hour honey tones</label>
+                </div>
+
+                <div class="question">
+                    <p>7. Lastly, choose a lyric vibe:</p>
+                    <label><input type="radio" name="s7" value="adore"> Honest, sweet confessions</label><br>
+                    <label><input type="radio" name="s7" value="tvgirl"> Clever stories about romance</label><br>
+                    <label><input type="radio" name="s7" value="shesgreen"> Ethereal, dreamy fragments</label><br>
+                    <label><input type="radio" name="s7" value="clairo"> Natural, cozy everyday observations</label><br>
+                    <label><input type="radio" name="s7" value="wheatus"> Fun, conversational teenage stories</label><br>
+                    <label><input type="radio" name="s7" value="avril"> Direct, loud, and unfiltered declarations</label><br>
+                    <label><input type="radio" name="s7" value="lana"> Glamorous and dramatic lines</label>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="button" class="quiz-btn" onclick="calculateSong()">Match My Track! 🎵</button>
+                </div>
+            </form>
+
+            <div id="song-result" class="result-display">
+                <img id="song-img" class="result-img" src="" alt="Song Match Image">
+                <div id="song-text"></div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -295,21 +388,31 @@
         function showQuiz(quizType) {
             const charSection = document.getElementById('character-section');
             const personSection = document.getElementById('personality-section');
+            const songSection = document.getElementById('song-section');
 
             // Clean up old results and hide image boxes completely on swap
             document.getElementById('character-img').style.display = 'none';
             document.getElementById('character-text').innerHTML = '';
             document.getElementById('personality-img').style.display = 'none';
             document.getElementById('personality-text').innerHTML = '';
+            document.getElementById('song-img').style.display = 'none';
+            document.getElementById('song-text').innerHTML = '';
 
             if (quizType === 'character') {
                 charSection.style.display = 'block';
                 personSection.style.display = 'none';
+                songSection.style.display = 'none';
                 document.getElementById('character-quiz').reset();
             } else if (quizType === 'personality') {
                 personSection.style.display = 'block';
                 charSection.style.display = 'none';
+                songSection.style.display = 'none';
                 document.getElementById('personality-quiz').reset();
+            } else if (quizType === 'song') {
+                songSection.style.display = 'block';
+                charSection.style.display = 'none';
+                personSection.style.display = 'none';
+                document.getElementById('song-quiz').reset();
             }
         }
 
@@ -335,53 +438,20 @@
                 if (counts[char] > maxCount) { maxCount = counts[char]; maxChar = char; }
             }
 
-            // Object holding descriptions AND image file locations for characters
             const characterData = {
-                "Jinx": {
-                    img: "jinx.png",
-                    text: "You are Jinx! Chaotic, brilliant, and utterly unpredictable, at least, to those around you. But when you're most yourself, you find comfort in being with the people you're closest with, and enjoy doing whatever you can to keep them safe and happy."
-                },
-                "Luna": {
-                    img: "luna.png",
-                    text: "You are Luna Lovegood! Whimsical, completely unique, and beautifully unbothered by what other people think. You enjoy being yourself and you know you don't exactly fit in much, but that's okay!"
-                },
-                "Kat": {
-                    img: "kat.png",
-                    text: "You are Kat Stratford! Sharp-witted, fiercely independent, and unapologetic about your tastes and music standards. You're also the kind of person who wants but also doesn't want a boyfriend at the same time."
-                },
-                "Beth": {
-                    img: "beth.png",
-                    text: "You are Beth Harmon! Hyper-focused, deeply analytical, and possessing a quiet genius that demands perfection. You put your effort into projects every time, enjoying the results more than anyone else ever will."
-                },
-                "Max": {
-                    img: "max.png",
-                    text: "You are Max Caulfield! Introspective, filled with nostalgia, and constantly holding onto sweet moments in time. You definitely love taking photos of anything you find aesthetic."
-                },
-                "Emily": {
-                    img: "emily.png",
-                    text: "You are Emily Charlton! Sharp, direct, meticulously put-together, and deeply dedicated to chic excellence. You believe in yourself most above all, respectable and confident with every step."
-                },
-                "Nancy": {
-                    img: "nancy.png",
-                    text: "You are Nancy Wheeler! Unbelievably determined, bold under pressure, and highly protective of your close inner circle. You don't let anyone underestimate you, pushing to always be your best."
-                },
-                "Nina": {
-                    img: "nina.png",
-                    text: "You are Nina Sayers! Graceful, dedicated, and intimately familiar with the intense struggle of letting go to reach true mastery. You seek independence and peace, trying hard to become what you've always wanted to be."
-                },
-                "Susanna": {
-                    img: "susanna.png",
-                    text: "You are Susanna Kaysen! Deeply reflective, beautifully complicated, and viewing the world through an alternative lens. Thoughts swirl through your mind 24/7, but that makes you a truly understanding person."
-                },
-                "Knives": {
-                    img: "knives.png",
-                    text: "You are Knives Chau! Vibrant, intensely loyal, and full of high-energy passion for the things and idols you love. You're a thrill to have around and people can always count on you to liven up the mood."
-                }
+                "Jinx": { img: "jinx.png", text: "You are Jinx! Chaotic, brilliant, and utterly unpredictable..." },
+                "Luna": { img: "luna.png", text: "You are Luna Lovegood! Whimsical, completely unique..." },
+                "Kat": { img: "kat.png", text: "You are Kat Stratford! Sharp-witted, fiercely independent..." },
+                "Beth": { img: "beth.png", text: "You are Beth Harmon! Hyper-focused, deeply analytical..." },
+                "Max": { img: "max.png", text: "You are Max Caulfield! Introspective, filled with nostalgia..." },
+                "Emily": { img: "emily.png", text: "You are Emily Charlton! Sharp, direct, meticulously put-together..." },
+                "Nancy": { img: "nancy.png", text: "You are Nancy Wheeler! Unbelievably determined, bold under pressure..." },
+                "Nina": { img: "nina.png", text: "You are Nina Sayers! Graceful, dedicated, and intimately familiar..." },
+                "Susanna": { img: "susanna.png", text: "You are Susanna Kaysen! Deeply reflective, beautifully complicated..." },
+                "Knives": { img: "knives.png", text: "You are Knives Chau! Vibrant, intensely loyal..." }
             };
 
             const result = characterData[maxChar];
-
-            // Inject the image path, turn the element visible, and add the text description
             if (result) {
                 imgElement.src = result.img;
                 imgElement.style.display = 'inline-block';
@@ -414,42 +484,16 @@
                 if (counts[trait] > maxCount) { maxCount = counts[trait]; maxTrait = trait; }
             }
 
-            // Object holding titles, descriptions, and image locations for personality archetypes
             const personalityData = {
-                "Sunshine": {
-                    title: "Ray of Sunshine ☀️",
-                    img: "sunshine.jpg",
-                    text: "You bring immense warmth and brightness wherever you go! Your energy is sweet, playful, and completely contagious."
-                },
-                "Sky": {
-                    title: "Starry Sky 🌌",
-                    img: "sky.jpg",
-                    text: "You are deep, comforting, and beautifully calm. You appreciate slow late-night conversations and subtle, artistic environments."
-                },
-                "Sea": {
-                    title: "Sparkling Sea 🌊",
-                    img: "sea.jpg",
-                    text: "Daring, dynamic, and refreshing! You have an adventurous soul and don't mind making big waves when expressing yourself."
-                },
-                "Bookworm": {
-                    title: "Unnoticed Bookworm 📚",
-                    img: "bookworm.jpg",
-                    text: "Quietly brilliant and reflective. You notice the tiny, beautiful details in life that everyone else completely skips over."
-                },
-                "Baked": {
-                    title: "Freshly Baked 🥐",
-                    img: "baked.jpg",
-                    text: "Incredibly loyal, cozy, and comforting. You give off the best safe-space energy and value heartfelt kindness above all else."
-                },
-                "Supermodel": {
-                    title: "Supermodel 💅",
-                    img: "supermodel.jpg",
-                    text: "Chic, confident, and unapologetic! You appreciate high quality, strong boundaries, and running the scene entirely on your terms."
-                }
+                "Sunshine": { title: "Ray of Sunshine ☀️", img: "sunshine.jpg", text: "You bring immense warmth and brightness wherever you go! Your energy is sweet, playful, and completely contagious." },
+                "Sky": { title: "Starry Sky 🌌", img: "sky.jpg", text: "You are deep, comforting, and beautifully calm. You appreciate slow late-night conversations and subtle, artistic environments." },
+                "Sea": { title: "Sparkling Sea 🌊", img: "sea.jpg", text: "Daring, dynamic, and refreshing! You have an adventurous soul and don't mind making big waves when expressing yourself." },
+                "Bookworm": { title: "Unnoticed Bookworm 📚", img: "bookworm.jpg", text: "Quietly brilliant and reflective. You notice the tiny, beautiful details in life that everyone else completely skips over." },
+                "Baked": { title: "Freshly Baked 🥐", img: "baked.jpg", text: "Incredibly loyal, cozy, and comforting. You give off the best safe-space energy and value heartfelt kindness above all else." },
+                "Supermodel": { title: "Supermodel 💅", img: "supermodel.jpg", text: "Chic, confident, and unapologetic! You appreciate high quality, strong boundaries, and running the scene entirely on your terms." }
             };
 
             const result = personalityData[maxTrait];
-
             if (result) {
                 imgElement.src = result.img;
                 imgElement.style.display = 'inline-block';
@@ -457,6 +501,77 @@
             } else {
                 imgElement.style.display = 'none';
                 textElement.innerHTML = `<h3>You are a <strong>Unique Soul ✦</strong>!</h3><p>You contain a gorgeous mix of multiple personality aesthetics!</p>`;
+            }
+        }
+
+        function calculateSong() {
+            const form = document.getElementById('song-quiz');
+            const imgElement = document.getElementById('song-img');
+            const textElement = document.getElementById('song-text');
+
+            const answers = [];
+            for (let i = 1; i <= 7; i++) { answers.push(form['s' + i] ? form['s' + i].value : ""); }
+            const validAnswers = answers.filter(ans => ans !== "");
+
+            if (validAnswers.length < 7) {
+                imgElement.style.display = 'none';
+                textElement.innerHTML = "<span style='color: #c292b4; font-weight: bold;'>Please pick choices for all 7 questions! 🎵</span>";
+                return;
+            }
+
+            const counts = {};
+            let maxSong = validAnswers[0]; let maxCount = 0;
+            for (const song of validAnswers) {
+                counts[song] = (counts[song] || 0) + 1;
+                if (counts[song] > maxCount) { maxCount = counts[song]; maxSong = song; }
+            }
+
+            const songData = {
+                "adore": {
+                    title: "did i tell you that i miss you - adore 🧸",
+                    img: "ditytimy.jpg",
+                    text: "Your track match is did i tell you that i miss you by adore! You have a deeply sweet, nostalgic soul. You appreciate close bonds, tender memories, and aren't afraid to show your real emotions. Give it a listen!"
+                },
+                "tvgirl": {
+                    title: "The Blonde - TV Girl 📻",
+                    img: "theblonde.jpg",
+                    text: "Your track match is the blonde by tv girl! You are cool, clever, and love an indie-retro aesthetic. You look at life with a unique perspective and love classic beats.  Give it a listen!"
+                },
+                "shesgreen": {
+                    title: "Mandy - she's green ☁️",
+                    img: "shesgreen.png",
+                    text: "Your track match is mandy by she's green! Ethereal, mysterious, and beautifully atmospheric. You love drifting away into deep walls of sound and moody weather loops.  Give it a listen!"
+                },
+                "clairo": {
+                    title: "Amoeba - Clairo 🌱",
+                    img: "amoba.jpg",
+                    text: "Your track match is amoeba by clairo! Groovy, grounded, and cozy. You find peace in sweet simple daily routines, art spaces, and hanging with good friends.  Give it a listen!"
+                },
+                "wheatus": {
+                    title: "Teenage Dirtbag - Wheatus 🎸",
+                    img: "wheatus.jpg",
+                    text: "Your track match is teenage dirtbag by wheatus! You are an absolute classic alternative soul. You might feel like an outsider sometimes, but you own it completely with a fun rocker spirit.  Give it a listen!"
+                },
+                "avril": {
+                    title: "What The Hell - Avril Lavigne ⚡",
+                    img: "avril.jpg",
+                    text: "Your track match is what the hell by avril lavigne! High energy, completely playful, and totally bold. You make your own rules, shake things up, and have fun no matter what.  Give it a listen!"
+                },
+                "lana": {
+                    title: "Radio - Lana Del Rey 🍒",
+                    img: "radio.jpg",
+                    text: "Your track match is radio by lana del rey! Pure cinematic glamour. You have a dreamy, romantic heart and love feeling like the absolute main character wherever you go.  Give it a listen!"
+                }
+            };
+
+            const result = songData[maxSong];
+            if (result) {
+                imgElement.src = result.img;
+                imgElement.style.display = 'inline-block';
+                textElement.innerHTML = `<h3>Your Song Vibe:</h3><h4><strong>${result.title}</strong></h4><p>${result.text}</p>`;
+            } else {
+                imgElement.style.display = 'none';
+                textElement.innerHTML = `<h3>Your Song Vibe: <strong>Eclectic Playlist 🎧</strong></h3><p>Your choices span a brilliant mix of indie bedroom sounds, rock cores, and pop anthems!</p>`;
             }
         }
     </script>
