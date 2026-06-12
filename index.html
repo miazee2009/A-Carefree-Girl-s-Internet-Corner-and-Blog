@@ -177,6 +177,13 @@
                 topElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
+        // Add this inside your script tag at the bottom of index.html
+        window.addEventListener('pageshow', function (event) {
+            // If the user came back via the back/forward button, force a reload
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
     </script>
 
 </body>
