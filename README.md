@@ -1,2 +1,5 @@
 # A-Carefree-Girl-s-Internet-Corner-and-Blog
-Hiii! It seems like the website is under construction..check again later while I sort out the issue! Love ya :)
+Hiiii welcome to my website!! I'm Mia and I'm bored (surprise, surprise) so I tried using Gemini to create my own website, fueled by my creativity. 
+Updates:
+<p>-Added new page: Song Recs (following song recommendations that bring you to spotify with a click!)</p>
+<p>-Added new page: Outfit Inspo (following outfit inspiration and thoughts on fashion)</p>
