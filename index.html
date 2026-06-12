@@ -177,11 +177,15 @@
                 topElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
-        // Add this inside your script tag at the bottom of index.html
         window.addEventListener('pageshow', function (event) {
-            // If the user came back via the back/forward button, force a reload
+            // If the browser tries to serve a frozen/cached copy from memory:
             if (event.persisted) {
                 window.location.reload();
+            }
+
+            // Manually force Lyket to scan the page and render any missing buttons
+            if (window.Lyket && typeof window.Lyket.init === 'function') {
+                window.Lyket.init();
             }
         });
     </script>
