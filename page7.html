@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies - My Internet Corner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Special layout styles for your movie collection */
+        .movie-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .movie-card {
+            background: #fffeff;
+            border: 1px solid #c292b4;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            gap: 20px;
+            font-family: 'Courier New', monospace;
+            align-items: center;
+        }
+
+        /* Responsive design for smaller phone screens */
+        @media (max-width: 600px) {
+            .movie-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .movie-poster {
+            width: 120px;
+            height: 180px;
+            object-fit: cover;
+            border: 1px solid #c292b4;
+            border-radius: 4px;
+            background-color: #ffeff9; /* fallback background color */
+        }
+
+        .movie-info {
+            flex: 1;
+        }
+
+        .movie-title {
+            color: #c292b4;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.3rem;
+        }
+
+        .movie-meta {
+            font-size: 0.85rem;
+            color: #a17094;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .movie-summary {
+            line-height: 1.5;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="shape shape-1">✦</div>
+    <div class="shape shape-2">♥</div>
+    <div class="shape shape-3">✦</div>
+
+    <header id="top">
+        <div class="header-banner-container">
+            <img src="wallpaper.jpg" alt="Diary Banner" class="header-banner-img">
+        </div>
+        <div class="sparkle-decoration">✦ ✦ ✦</div>
+        <h1>
+            <img src="mogu.png" alt="icon" class="title-custom-icon left-icon">
+            My Movie Corner
+            <img src="essiepolish.png" alt="icon" class="title-custom-icon right-icon">
+        </h1>
+        <p>A collection of films that match my vibe, along with my thoughts! 🎬</p>
+    </header>
+
+    <nav class="top-nav">
+        <span class="nav-title">Grab some popcorn and browse my favorites ♡</span>
+        <div class="nav-links">
+            <a href="./index.html" class="nav-item">✦ Home ♡</a>
+            <a href="./page2.html" class="nav-item">✦ Song Recs ♡</a>
+            <a href="./page3.html" class="nav-item">✦Digital Drawer ♡</a>
+            <a href="./page6.html" class="nav-item">✦ Quizzes ♡</a>
+            <a href="./page4.html" class="nav-item">✦ Contact ♡</a>
+            <a href="./page5.html" class="nav-item">✦About♡</a>
+        </div>
+    </nav>
+
+    <main class="movie-container">
+
+        <div class="movie-card">
+            <img src="tdwpposter.jpg" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">✦ The Devil Wears Prada ♡</h3>
+                <div class="movie-meta">Comedy/Drama • 2006 • My Rating: ★★★★★</div>
+                <p class="movie-summary">
+                    I didn't think I'd get so attached to this movie, but it got me into fashion! All the actresses are sosososososo talented and the movie itself is sooo chic. I loved it so much, the second one is on my watchlist!
+                </p>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <img src="posterbeforesunrise.jpg" alt="Movie Poster" class="movie-poster">
+            <div class="movie-info">
+                <h3 class="movie-title">✦ Before Sunrise ♡</h3>
+                <div class="movie-meta">Romance/Drama • 1995 • My Rating: ★★★★★</div>
+                <p class="movie-summary">
+                    This is a beauty. As someone who cannot have a single good conversation, this movie is so heartwarming and just utterly peaceful; I wish I could talk like this! I have so many things to talk about but no way to express them.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="sparkle-decoration">✦</div>
+        <p>© 2026 A Carefree Girl's Internet Corner and Blog</p>
+    </footer>
+
+</body>
+</html>
